@@ -1,6 +1,9 @@
 body {
+    background-color: #bcf1f7;
     background-image: url(background.png);
-	background-size: 100%;
+    background-size: 1200px 675px;
+    background-repeat: no-repeat;
+    background-position: center top;
 }
 
 div#content {
