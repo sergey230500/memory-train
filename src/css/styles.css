@@ -76,4 +76,5 @@ input#answer {
     font-weight: bold;
     font-family: cursive;
     text-align: center;
+    user-select: none;
 }
