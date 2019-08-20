@@ -6,7 +6,7 @@ body {
     background-position: center top;
 }
 
-div#content {
+#content {
     display: flex;
     justify-content: center;
     height: 100%;
@@ -15,22 +15,65 @@ div#content {
     flex-flow: column nowrap;
 }
 
-#check {
-    padding: 10px;
-    margin: 10px;
-    border-radius: 8px;
-    border: none;
-    background-color: black;
-    color: white;
-}
-
 .main-text {
     font-size: 100px;
     font-weight: bold;
     font-family: cursive;
+    margin-top: 0.4em;
+    margin-bottom: 0.4em;
 }
-#timeLeft {
+
+.display-text {
+    transition-property: opacity;
+    transition-duration: 0s;
+    transition-timing-function: linear;
+    opacity: 1;
+    will-change: opacity;
+}
+
+.display-text.invisible {
+    transition-duration: 0.4s;
+    opacity: 0;
+}
+
+input#answer {
+    display: inline-block;
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    text-align: center;
+    outline: none;
+}
+
+.progress {
+    position: relative;
+    width: 10em;
+    height: 1em;
+    line-height: 1;
+    border-width: 1px;
+    border-color: black;
     font-size: 50px;
+    background-color: rgba(255, 255, 255, 0.3);
+    overflow: hidden;
+}
+
+.progress .progress-bar {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    background-image: linear-gradient(90deg, #f00 0, #0f0 500px);
+}
+
+.progress .progress-text {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: transparent;
+    color: black;
     font-weight: bold;
     font-family: cursive;
+    text-align: center;
 }
