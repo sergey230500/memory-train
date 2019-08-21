@@ -18,14 +18,23 @@ MemoryGame.prototype = {
     this.attachListeners();
   },
   attachListeners: function(){
-
+	  //blur userInput
+	  //input userInput
+	  //keyup/keydown body
+	  //submit gameForm
+	  //click body
+	  this.userInput.addEventListener('blur',event => this.retrieveFocus());
+	
   },
   startGame: function(){},
   startChain: function(){},
   continueChain: function(value){},
   updateTimer: function(){},
   timerOverdue: function(){},
-  stopGame: function(){}
+  stopGame: function(){},
+  retrieveFocus: function(event){
+	  this.userInput.focus();
+  }
 
   // обработчики событий
 };
